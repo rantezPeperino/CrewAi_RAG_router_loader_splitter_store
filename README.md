@@ -1,30 +1,19 @@
-# CrewAi_RAG_router_loader_splitter_store
-Proyecto multiagente con CrewAi con decorator (@crew,@task,@agent,@CrewBase), para realizar Rag con documentos pdf, html, csv.
+# CrewAi RAG Router Loader Splitter Store
 
-Las tareas son las que ordenan el proyecto, los agentes las realizan, en este caso es   Process.sequential.
-                route_document : definir que tipo de documento
-                load_document  : cargar el documento            
-                split_document : dividir el documento
-                store_vectors  : almacenar los chunk del documento
-        
+Proyecto multiagente con CrewAi utilizando decoradores (`@crew`, `@task`, `@agent`, `@CrewBase`), para realizar RAG (Retrieval-Augmented Generation) con documentos en formatos PDF, HTML y CSV.
 
--Se crearon 4 agentes
-  -Route determina el tipo de archivo pdf, html, csv.
-  -document_loader encargado de cargar el documento. Usando custom tool correspondiente PDFLoaderTool CSVLoaderTool HTMLLoaderTool
-  -document_splitter encargado de dividir en chunk el documento
-  -vector_store encargado de guardar en la base vectorial despues del llm.
+Las tareas son las que estructuran el proyecto, y los agentes se encargan de ejecutarlas, en este caso de manera secuencial con `Process.sequential`. Las tareas incluyen:
 
-  
+- **route_document**: Definir el tipo de documento.
+- **load_document**: Cargar el documento.
+- **split_document**: Dividir el documento en partes (chunks).
+- **store_vectors**: Almacenar los chunks del documento en una base de datos vectorial.
 
+### Agentes
+Se crearon 4 agentes para el procesamiento:
 
-
-
-
-
-
-
-
-
-
-
+1. **Route**: Determina el tipo de archivo (PDF, HTML o CSV).
+2. **document_loader**: Encargado de cargar el documento. Usa herramientas personalizadas según el tipo de archivo, como `PDFLoaderTool`, `CSVLoaderTool` y `HTMLLoaderTool`.
+3. **document_splitter**: Responsable de dividir el documento en chunks.
+4. **vector_store**: Almacena los chunks en la base vectorial después del procesamiento con el LLM (Language Model).
 
