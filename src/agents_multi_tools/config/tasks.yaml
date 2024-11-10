@@ -1,0 +1,20 @@
+route_document:
+  description: "Por favor analiza el archivo y determina su tipo. El archivo está en la ruta {file_path}"
+  expected_output: "El tipo de documento identificado, para seleccionar el agente correspondiente"
+  agent: router
+
+load_document:
+  description: "Carga el contenido del archivos segun corresponda, PDF, HTML, CSV, ubicado en {file_path}"
+  expected_output: "El contenido completo del documento"
+  agent: document_loader
+ 
+
+split_document:
+  description: "Divide el documento cargado, el documento en chunks manejables para su procesamiento"
+  expected_output: "Los chunks generados del documento"
+  agent: document_splitter
+
+store_vectors:
+  description: "Almacena los chunks procesados en la base de datos vectorial"
+  expected_output: "Confirmación de almacenamiento exitoso"
+  agent: vector_store  
