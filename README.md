@@ -1,6 +1,6 @@
 # CrewAi RAG Router Loader Splitter Store
 
-Proyecto multiagente con CrewAi utilizando **decoradores** (`@crew`, `@task`, `@agent`, `@CrewBase`), para realizar RAG (Retrieval-Augmented Generation) con documentos en formatos PDF, HTML y CSV.
+Proyecto multiagente con CrewAi utilizando **decorator** (`@crew`, `@task`, `@agent`, `@CrewBase`), para realizar RAG (Retrieval-Augmented Generation) con documentos en formatos PDF, HTML y CSV.
 
 Las tareas son las que estructuran el proyecto, y los agentes se encargan de ejecutarlas, en este caso de manera secuencial con `Process.sequential`. Las tareas incluyen:
 
